@@ -16,6 +16,7 @@ export const BasicText = styled.p`
   font-size: ${(props) => (props.fontSize ? props.fontSize : "20px")};
   line-height: ${(props) => (props.lineHeight ? props.lineHeight : "30px")};
   color: ${(props) => (props.color ? props.color : "#1C1B1F")};
-  text-align: ${(props) => (props.align ? props.align : "center")};
+  text-align: ${(props) => (props.alignText ? props.alignText : "center")};
   max-width: ${(props) => (props.maxWidth ? props.maxWidth : "100%")};
+  width: ${(props) => (props.width ? props.width : "100%")};
 `;

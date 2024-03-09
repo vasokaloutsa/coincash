@@ -1,18 +1,18 @@
 import { FlexContainer } from "./styles/Containers.styled";
-import {
-  InfoHeader,
-  BasicText,
-  ColouredText,
-} from "./styles/Texts.styled";
+import { InfoHeader, BasicText, ColouredText } from "./styles/Texts.styled";
 
 const CoincashBasicText = ({
   headerTitle = [],
   subHeaderText,
   colouredText,
+  alignText,
+  alignItems,
   children,
+  maxWidth,
+  width,
 }) => {
   return (
-    <FlexContainer flexDirectionColumn gap="16px">
+    <FlexContainer flexDirectionColumn alignItems={alignItems} gap="16px">
       <InfoHeader>
         <>
           {headerTitle?.length >= 1 ? (
@@ -27,7 +27,11 @@ const CoincashBasicText = ({
         </>
         {colouredText ? <ColouredText> {colouredText} </ColouredText> : <></>}
       </InfoHeader>
-      <BasicText maxWidth="542px">{subHeaderText}</BasicText>
+      <BasicText maxWidth={maxWidth} width={width} alignText={alignText}>
+        {subHeaderText
+          ? subHeaderText
+          : "The easiest way to use your cryptocurrencies for everyday purchases"}
+      </BasicText>
       {children}
     </FlexContainer>
   );
