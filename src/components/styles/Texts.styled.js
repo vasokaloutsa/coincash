@@ -5,6 +5,7 @@ export const InfoHeader = styled.h3`
   font-size: 48px;
   color: ${(props) => (props.light ? "#FFFFFF" : "#1C1B1F")};
   line-height: 72px;
+  text-align: ${(props) => (props.textAlign ? props.textAlign : "normal")};
 `;
 
 export const ColouredText = styled.span`

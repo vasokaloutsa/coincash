@@ -4,7 +4,9 @@ import { InfoHeader, BasicText, ColouredText } from "./styles/Texts.styled";
 const CoincashBasicText = ({
   headerTitle = [],
   subHeaderText,
+  subHeaderTextColor,
   colouredText,
+  headerAlignText,
   alignText,
   alignItems,
   children,
@@ -13,9 +15,9 @@ const CoincashBasicText = ({
 }) => {
   return (
     <FlexContainer flexDirectionColumn alignItems={alignItems} gap="16px">
-      <InfoHeader>
+      <InfoHeader textAlign={headerAlignText}>
         <>
-          {headerTitle?.length >= 1 ? (
+          {headerTitle?.length > 1 ? (
             <>
               {headerTitle[0]}
               <br />
@@ -27,7 +29,12 @@ const CoincashBasicText = ({
         </>
         {colouredText ? <ColouredText> {colouredText} </ColouredText> : <></>}
       </InfoHeader>
-      <BasicText maxWidth={maxWidth} width={width} alignText={alignText}>
+      <BasicText
+        maxWidth={maxWidth}
+        width={width}
+        alignText={alignText}
+        color={subHeaderTextColor}
+      >
         {subHeaderText
           ? subHeaderText
           : "The easiest way to use your cryptocurrencies for everyday purchases"}

@@ -1,6 +1,5 @@
 import NavBar from "./NavBar";
 import CoinCashInfo from "./CoinCashInfo";
-
 import {
   FlexContainer,
   LinearGradientContainer,
@@ -11,7 +10,7 @@ import { BasicText } from "./styles/Texts.styled";
 const Header = () => {
   return (
     <LinearGradientContainer>
-      <NavBar />
+      <NavBar navBarItems={["Features", "About", "Contact"]} hasButton />
       <FlexContainer gap="46px" justifyContent="space-between">
         <CoinCashInfo />
         <Iphone />

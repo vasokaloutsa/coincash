@@ -2,6 +2,7 @@ import "./App.css";
 import { createGlobalStyle } from "styled-components";
 import Header from "./components/Header";
 import Body from "./components/Body";
+import Footer from "./components/Footer";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -16,6 +17,7 @@ function App() {
       <GlobalStyle />
       <Header></Header>
       <Body></Body>
+      <Footer></Footer>
     </div>
   );
 }

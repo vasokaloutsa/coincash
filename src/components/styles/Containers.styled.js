@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const LinearGradientContainer = styled.div`
   width: 100%;
-  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 102, 255, 0.2));
+  height: 100%;
+  background:${(props) => (props.dark ? "linear-gradient(rgba(2, 13, 31, 1), rgba(0, 102, 255, 1))" : "linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 102, 255, 0.2))")};
 `;
 
 export const FlexContainer = styled.div`

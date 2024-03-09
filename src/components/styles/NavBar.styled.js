@@ -8,7 +8,7 @@ const NavBarContainer = styled.nav`
 `;
 
 const NavBarItem = styled.a`
-  color: #1c1b1f;
+  color: ${(props) => (props.light ? "#fff" : "#1c1b1f")};
   font-weight: 600;
   font-size: 20px;
 `;
