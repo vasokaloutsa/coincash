@@ -7,7 +7,7 @@ const CoinCashInfo = () => {
       colouredText="COINCASH"
       headerTitle={["You can buy anything", "with"]}
     >
-      <Button $primary width="276px">
+      <Button onClick={() => alert("HI")} $primary width="276px">
         Download now for free
       </Button>
     </CoincashBasicText>

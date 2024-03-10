@@ -17,7 +17,7 @@ const BasicInputFieldWithButton = ({ actionUrl, id, children }) => {
       <form action={actionUrl}>
         <InputField type="text" id={id} name="fname" placeholder={children} />
       </form>
-      <Button>Sign up</Button>
+      <Button onClick={() => alert("HI")}>Sign up</Button>
     </div>
   );
 };
