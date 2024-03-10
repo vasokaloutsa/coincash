@@ -6,6 +6,7 @@ export const InfoHeader = styled.h3`
   color: ${(props) => (props.light ? "#FFFFFF" : "#1C1B1F")};
   line-height: 72px;
   text-align: ${(props) => (props.textAlign ? props.textAlign : "normal")};
+  margin: ${(props) => (props.margin ? props.margin : "0")};
 `;
 
 export const ColouredText = styled.span`
@@ -20,4 +21,5 @@ export const BasicText = styled.p`
   text-align: ${(props) => (props.alignText ? props.alignText : "center")};
   max-width: ${(props) => (props.maxWidth ? props.maxWidth : "100%")};
   width: ${(props) => (props.width ? props.width : "100%")};
+  margin: ${(props) => (props.margin ? props.margin : "0")};
 `;

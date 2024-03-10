@@ -4,9 +4,14 @@ import { NavBarContainer, NavBarItem } from "./styles/NavBar.styled";
 import { FlexContainer } from "./styles/Containers.styled";
 import { Button } from "./styles/Button.styled";
 
-const NavBar = ({ navBarItems = [], hasButton = false, light = false }) => {
+const NavBar = ({
+  navBarItems = [],
+  hasButton = false,
+  light = false,
+  margin,
+}) => {
   return (
-    <NavBarContainer>
+    <NavBarContainer margin={margin}>
       {light ? <CoincashLightLogo /> : <CoincashLogo />}
       <FlexContainer
         justifyContent="space-between"

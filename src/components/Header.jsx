@@ -10,8 +10,8 @@ import { BasicText } from "./styles/Texts.styled";
 const Header = () => {
   return (
     <LinearGradientContainer>
-      <NavBar navBarItems={["Features", "About", "Contact"]} hasButton />
-      <FlexContainer gap="46px" justifyContent="space-between">
+      <NavBar navBarItems={["Features", "About", "Contact"]} hasButton margin="44px 164px 164px"/>
+      <FlexContainer gap="46px" justifyContent="end">
         <CoinCashInfo />
         <Iphone />
       </FlexContainer>

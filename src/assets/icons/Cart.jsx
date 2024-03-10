@@ -1,9 +1,11 @@
-export default function Cart() {
+export default function Cart({ width, height }) {
   return (
     <svg
-      width="80"
-      height="80"
-      viewBox="0 0 80 80"
+      width={width ? width : "81"}
+      height={height ? height : "80"}
+      maxWidth="81"
+      maxHeight="80px"
+      viewBox="0 0 81 80"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

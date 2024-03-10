@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const LinearGradientContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  background:${(props) => (props.dark ? "linear-gradient(rgba(2, 13, 31, 1), rgba(0, 102, 255, 1))" : "linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 102, 255, 0.2))")};
+  background: ${(props) =>
+    props.dark
+      ? "linear-gradient(rgba(2, 13, 31, 1), rgba(0, 102, 255, 1))"
+      : "linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 102, 255, 0.2))"};
 `;
 
 export const FlexContainer = styled.div`
@@ -14,4 +15,5 @@ export const FlexContainer = styled.div`
   justify-content: ${(props) =>
     props.justifyContent ? props.justifyContent : "normal"};
   margin: ${(props) => (props.margin ? props.margin : "0px")};
+  max-width: ${(props) => (props.maxWidth ? props.maxWidth : "100%")};
 `;

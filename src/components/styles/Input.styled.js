@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
-export const Button = styled.input`
+export const InputField = styled.input`
   width: ${(props) => props.width};
-  height: 54px;
-  color: #fff;
-  font-weight: 600;
+  color: #a3a6aa;
+  font-weight: 400;
   font-size: 20px;
-  background-color: ${(props) => (props.primary ? "#0066ff" : "#A3A6AA")};
-  padding: 12px 24px;
-  border-radius: 4px;
+  background-color: ${(props) => (props.primary ? props.primary : "#fff")};
+  padding: 8px 8px 8px 12px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
 `;

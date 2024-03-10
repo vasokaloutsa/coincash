@@ -12,9 +12,15 @@ const GlobalStyle = createGlobalStyle`
   }`;
 
 function App() {
+  const style = {
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
+    minHeight: "100vh",
+  };
   return (
     <div>
-      <GlobalStyle />
+      {/* <GlobalStyle /> */}
       <Header></Header>
       <Body></Body>
       <Footer></Footer>

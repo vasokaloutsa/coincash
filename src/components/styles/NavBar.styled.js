@@ -4,7 +4,7 @@ const NavBarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 44px 164px 164px;
+  margin: ${(props) => (props.margin ? props.margin : "0")};
 `;
 
 const NavBarItem = styled.a`

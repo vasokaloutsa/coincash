@@ -12,10 +12,11 @@ const CoincashBasicText = ({
   children,
   maxWidth,
   width,
+  light,
 }) => {
   return (
     <FlexContainer flexDirectionColumn alignItems={alignItems} gap="16px">
-      <InfoHeader textAlign={headerAlignText}>
+      <InfoHeader light={light} textAlign={headerAlignText}>
         <>
           {headerTitle?.length > 1 ? (
             <>
