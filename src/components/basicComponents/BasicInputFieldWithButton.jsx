@@ -6,7 +6,7 @@ const BasicInputFieldWithButton = ({ actionUrl, id, children }) => {
     display: "flex",
     alignItems: "center",
     backgroundColor: "#fff",
-    maxWidth: "430px",
+    maxwidth: "430px",
     padding: "8px 8px 8px 12px",
     borderRadius: "8px",
     border: "none",

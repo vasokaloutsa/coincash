@@ -18,7 +18,7 @@ const IconCard = ({ icon, text = [] }) => {
   return isTablet ? (
     <div>
       <BasicIcon>{icon}</BasicIcon>
-      <BasicText maxWidth="96px" fontSize="16px" lineHeight="24px">
+      <BasicText $maxWidth="96px" fontSize="16px" $lineHeight="24px">
         {text[0]}
         <br />
         <ColouredText>{text[1]} </ColouredText>
@@ -26,10 +26,10 @@ const IconCard = ({ icon, text = [] }) => {
       </BasicText>
     </div>
   ) : (
-    <FlexContainer flexDirectionColumn alignItems="center" gap="36px">
+    <FlexContainer $flexDirectionColumn $alignItems="center" gap="36px">
       <BasicIcon>{icon}</BasicIcon>
       {text?.length > 0 ? (
-        <BasicText fontSize="24px" lineHeight="36px">
+        <BasicText fontSize="24px" $lineHeight="36px">
           {text[0]}
           <br />
           <ColouredText>{text[1]} </ColouredText>

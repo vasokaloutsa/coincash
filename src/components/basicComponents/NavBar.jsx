@@ -35,7 +35,6 @@ const NavBar = ({
       {light ? <CoincashLightLogo /> : <CoincashLogo />}
       {isMobile && hasBurgerIconOnMobile ? (
         <FlexContainer $justifyContent="space-around" $alwaysRow width="100vw">
-          <CoincashLogo />
           <MobileMenuIcon />
         </FlexContainer>
       ) : (

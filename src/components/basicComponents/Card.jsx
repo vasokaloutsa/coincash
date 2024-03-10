@@ -16,10 +16,10 @@ const Card = ({ imgOnLeft, headerTitle, imgSrc, children }) => {
 
   return (
     <FlexContainer
-      alignItems="center"
-      justifyContent="center"
+      $alignItems="center"
+      $justifyContent="center"
       gap="100px"
-      maxWidth="1400px"
+      $maxWidth="1400px"
     >
       {isMobile ? (
         <>

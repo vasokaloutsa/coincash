@@ -26,13 +26,13 @@ const CoincashBasicText = ({
   }, []);
   return (
     <FlexContainer
-      flexDirectionColumn
-      alignItems={centerTextOnMobile && isMobile ? "center" : alignItems}
+      $flexDirectionColumn
+      $alignItems={centerTextOnMobile && isMobile ? "center" : alignItems}
       gap="16px"
     >
       <InfoHeader
-        $light={light}
-        textAlign={headerAlignText}
+        light={light}
+        $textAlign={headerAlignText}
         $centerTextOnMobile={centerTextOnMobile}
       >
         <>
@@ -49,9 +49,9 @@ const CoincashBasicText = ({
         {colouredText ? <ColouredText> {colouredText} </ColouredText> : <></>}
       </InfoHeader>
       <BasicText
-        maxWidth={maxWidth}
+        $maxWidth={maxWidth}
         width={width}
-        alignText={alignText}
+        $alignText={alignText}
         color={subHeaderTextColor}
       >
         {subHeaderText

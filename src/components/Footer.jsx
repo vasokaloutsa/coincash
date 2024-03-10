@@ -31,7 +31,7 @@ const Footer = () => {
           colouredText="today"
           subHeaderText="Sign up to receive email updates on new products announcements, special promotions sales and more"
           subHeaderTextColor="#fff"
-          light
+          light={true}
           centerTextOnMobile={true}
         ></CoincashBasicText>
 
@@ -41,7 +41,7 @@ const Footer = () => {
 
         <NavBar
           navBarItems={["Privacy policy", "Terms and conditions"]}
-          light
+          light={true}
           margin="0px 164px 0px"
         />
       </LinearGradientContainer>

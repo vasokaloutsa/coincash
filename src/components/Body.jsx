@@ -13,12 +13,12 @@ const Body = () => {
   const [isMobile, setIsMobile] = useState(
     window.matchMedia("(max-width: 900px)").matches
   );
-  const [iconCardGap, setIconCardGap] = useState("300px")
+  const [iconCardGap, setIconCardGap] = useState("300px");
   useEffect(() => {
     window
       .matchMedia("(max-width: 900px)")
       .addEventListener("change", (e) => setIsMobile(e.matches));
-      window
+    window
       .matchMedia("(max-width: 1171px)")
       .addEventListener("change", (e) => setIconCardGap("100px"));
   }, []);
@@ -51,10 +51,10 @@ const Body = () => {
   ];
   return (
     <FlexContainer
-      flexDirectionColumn
+      $flexDirectionColumn
       gap="136px"
-      justifyContent="space-between"
-      alignItems="center"
+      $justifyContent="space-between"
+      $alignItems="center"
       margin="100px 0"
     >
       <CoincashBasicText

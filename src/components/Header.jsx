@@ -13,10 +13,18 @@ const Header = () => {
     window.matchMedia("(max-width: 700px)").matches
   );
 
+  const [isTablet, setIsTablet] = useState(
+    window.matchMedia("(max-width: 700px)").matches
+  );
+
   useEffect(() => {
     window
       .matchMedia("(max-width: 700px)")
       .addEventListener("change", (e) => setIsMobile(e.matches));
+
+    window
+      .matchMedia("(max-width: 900px)")
+      .addEventListener("change", (e) => setIsTablet(e.matches));
   }, []);
   return (
     <LinearGradientContainer>
@@ -26,9 +34,22 @@ const Header = () => {
         margin={isMobile ? "" : "16px"}
         hasBurgerIconOnMobile
       />
-      <FlexContainer gap="46px" justifyContent="end">
+      <FlexContainer
+        gap="46px"
+        $justifyContent="end"
+        margin={isMobile ? "16px 0 0" : "136px 0 0"}
+      >
         <CoinCashInfo />
-        <Iphone height={isMobile ? 252 : 569} width={isMobile ? 360 : 689} />
+        {isTablet ? (
+          <span style={{ margin: "0 auto", height: "100%" }}>
+            <Iphone
+              height={isMobile ? 252 : 569}
+              width={isMobile ? 360 : 689}
+            />
+          </span>
+        ) : (
+          <Iphone height={isMobile ? 252 : 569} width={isMobile ? 360 : 689} />
+        )}
       </FlexContainer>
       <div
         style={{
@@ -39,7 +60,7 @@ const Header = () => {
       >
         <BasicText
           fontSize="24px"
-          lineHeight="36px"
+          $lineHeight="36px"
           color="#fff"
           max-width="560px"
         >

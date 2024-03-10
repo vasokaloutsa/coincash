@@ -3,8 +3,8 @@ export default function Page({ width, height }) {
     <svg
       width={width ? width : "81"}
       height={height ? height : "80"}
-      maxWidth="81"
-      maxHeight="80px"
+      maxwidth="81"
+      maxheight="80px"
       viewBox="0 0 81 80"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
