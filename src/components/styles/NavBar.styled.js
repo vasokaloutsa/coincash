@@ -5,6 +5,10 @@ const NavBarContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   margin: ${(props) => (props.margin ? props.margin : "0")};
+  @media (max-width: 900px) {
+    flex-direction: ${(props) => (props.$alwaysRow ? "row" : "column")};
+    gap: 24px;
+  }
 `;
 
 const NavBarItem = styled.a`

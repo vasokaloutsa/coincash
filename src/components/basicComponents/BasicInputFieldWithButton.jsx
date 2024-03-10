@@ -1,13 +1,7 @@
-import { Button } from "./styles/Button.styled";
-import { InputField } from "./styles/Input.styled";
+import { Button } from "../styles/Button.styled";
+import { InputField } from "../styles/Input.styled";
 
-const BasicInputFieldWithButton = ({
-  actionUrl,
-  id,
-  children,
-  buttonText,
-  width,
-}) => {
+const BasicInputFieldWithButton = ({ actionUrl, id, children }) => {
   const style = {
     display: "flex",
     alignItems: "center",

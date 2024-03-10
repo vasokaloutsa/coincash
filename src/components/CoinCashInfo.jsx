@@ -1,5 +1,5 @@
 import { Button } from "./styles/Button.styled";
-import CoincashBasicText from "./CoincashBasicText";
+import CoincashBasicText from "./basicComponents/CoincashBasicText";
 
 const CoinCashInfo = () => {
   return (
@@ -8,7 +8,7 @@ const CoinCashInfo = () => {
       headerTitle={["You can buy anything", "with"]}
       subHeaderText="The easiest way to use your cryptocurrencies for everyday purchases"
     >
-      <Button primary width="276px">
+      <Button $primary width="276px">
         Download now for free
       </Button>
     </CoincashBasicText>

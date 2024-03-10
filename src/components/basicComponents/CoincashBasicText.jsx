@@ -1,5 +1,6 @@
-import { FlexContainer } from "./styles/Containers.styled";
-import { InfoHeader, BasicText, ColouredText } from "./styles/Texts.styled";
+import { FlexContainer } from "../styles/Containers.styled";
+import { InfoHeader, BasicText, ColouredText } from "../styles/Texts.styled";
+import React, { useState, useEffect } from "react";
 
 const CoincashBasicText = ({
   headerTitle = [],
@@ -13,10 +14,27 @@ const CoincashBasicText = ({
   maxWidth,
   width,
   light,
+  centerTextOnMobile = false,
 }) => {
+  const [isMobile, setIsMobile] = useState(
+    window.matchMedia("(max-width: 900px)").matches
+  );
+  useEffect(() => {
+    window
+      .matchMedia("(max-width: 900px)")
+      .addEventListener("change", (e) => setIsMobile(e.matches));
+  }, []);
   return (
-    <FlexContainer flexDirectionColumn alignItems={alignItems} gap="16px">
-      <InfoHeader light={light} textAlign={headerAlignText}>
+    <FlexContainer
+      flexDirectionColumn
+      alignItems={centerTextOnMobile && isMobile ? "center" : alignItems}
+      gap="16px"
+    >
+      <InfoHeader
+        $light={light}
+        textAlign={headerAlignText}
+        $centerTextOnMobile={centerTextOnMobile}
+      >
         <>
           {headerTitle?.length > 1 ? (
             <>

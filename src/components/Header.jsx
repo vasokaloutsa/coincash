@@ -1,4 +1,4 @@
-import NavBar from "./NavBar";
+import NavBar from "./basicComponents/NavBar";
 import CoinCashInfo from "./CoinCashInfo";
 import {
   FlexContainer,
@@ -6,14 +6,28 @@ import {
 } from "./styles/Containers.styled";
 import Iphone from "../assets/icons/Iphone";
 import { BasicText } from "./styles/Texts.styled";
+import React, { useState, useEffect } from "react";
 
 const Header = () => {
+  const [isMobile, setIsMobile] = useState(
+    window.matchMedia("(max-width: 700px)").matches
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia("(max-width: 7900px)")
+      .addEventListener("change", (e) => setIsMobile(e.matches));
+  }, []);
   return (
     <LinearGradientContainer>
-      <NavBar navBarItems={["Features", "About", "Contact"]} hasButton margin="44px 164px 164px"/>
+      <NavBar
+        navBarItems={["Features", "About", "Contact"]}
+        hasButton
+        margin="44px 164px 164px"
+      />
       <FlexContainer gap="46px" justifyContent="end">
         <CoinCashInfo />
-        <Iphone />
+        <Iphone height={isMobile ? 252 : 569} width={isMobile ? 360 : 689} />
       </FlexContainer>
       <div
         style={{

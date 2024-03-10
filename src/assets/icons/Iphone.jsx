@@ -1,12 +1,12 @@
-export default function Iphone() {
+export default function Iphone({ height, width }) {
   return (
     <svg
-      width="688"
-      height="569"
+      width={width || 688}
+      height={height || 569}
       viewBox="0 0 688 569"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      xmlnsXLink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <circle cx="347.5" cy="527.5" r="343.5" fill="#0066FF" />
       <circle cx="348.5" cy="541.5" r="293.5" fill="#0147AE" />
