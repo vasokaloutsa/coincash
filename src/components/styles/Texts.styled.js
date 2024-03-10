@@ -10,7 +10,9 @@ export const InfoHeader = styled.h3`
   @media (max-width: 900px) {
     max-width: ${(props) => props.maxWidth || "312px"};
     font-size: ${(props) => props.fontSize || "32px"};
-    text-align: ${(props) => (props.$centerTextOnMobile ? "center" : "initial")};
+    text-align: ${(props) =>
+      props.$centerTextOnMobile ? "center" : "initial"};
+    line-height: 48px;
   }
 `;
 
@@ -30,6 +32,7 @@ export const BasicText = styled.p`
   @media (max-width: 900px) {
     // max-width: ${(props) => props.maxWidth || "312px"};
     //  width: ${(props) => props.width || "312px"};
-    // text-align: ${(props) => (props.$centerTextOnMobile ? "center" : "initial")};
+    // text-align: ${(props) =>
+      props.$centerTextOnMobile ? "center" : "initial"};
   }
 `;

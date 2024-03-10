@@ -6,7 +6,6 @@ const CoinCashInfo = () => {
     <CoincashBasicText
       colouredText="COINCASH"
       headerTitle={["You can buy anything", "with"]}
-      subHeaderText="The easiest way to use your cryptocurrencies for everyday purchases"
     >
       <Button $primary width="276px">
         Download now for free

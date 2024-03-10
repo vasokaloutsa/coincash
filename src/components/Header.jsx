@@ -15,7 +15,7 @@ const Header = () => {
 
   useEffect(() => {
     window
-      .matchMedia("(max-width: 7900px)")
+      .matchMedia("(max-width: 700px)")
       .addEventListener("change", (e) => setIsMobile(e.matches));
   }, []);
   return (
@@ -23,7 +23,8 @@ const Header = () => {
       <NavBar
         navBarItems={["Features", "About", "Contact"]}
         hasButton
-        margin="44px 164px 164px"
+        margin={isMobile ? "" : "16px"}
+        hasBurgerIconOnMobile
       />
       <FlexContainer gap="46px" justifyContent="end">
         <CoinCashInfo />

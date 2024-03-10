@@ -60,6 +60,7 @@ const Body = () => {
       <CoincashBasicText
         headerTitle={["Buy anything you ever imagine"]}
         alignItems="center"
+        centerTextOnMobile
       ></CoincashBasicText>
 
       {/* Icon Cards */}
